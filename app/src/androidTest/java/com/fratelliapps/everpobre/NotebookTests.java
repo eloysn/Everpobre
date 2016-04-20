@@ -13,16 +13,20 @@ public class NotebookTests extends AndroidTestCase {
 
     public void testCanCreateANotebook() {
 
-       final Notebook sut = new Notebook(1, NOTEBOOK_TITLE);
+        final Notebook sut = new Notebook(1, NOTEBOOK_TITLE);
         assertNotNull(sut);
+        assertEquals(NOTEBOOK_TITLE, sut.getName());
         assertEquals(1, sut.getId());
     }
 
     public void testCreatingANotebookWithEmptyOrNullNameSetDefaultName () {
 
-        Notebook sut = new Notebook(1, null);
-
+        final Notebook sut = new Notebook(1, null);
         assertEquals(Notebook.DEFAULT_NAME, sut.getName());
+
+        final   Notebook sut2 = new Notebook(1, "");
+        assertEquals(Notebook.DEFAULT_NAME, sut2.getName());
+
 
     }
 

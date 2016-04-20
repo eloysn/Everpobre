@@ -5,7 +5,7 @@ package com.fratelliapps.everpobre.model;
  */
 public class Notebook {
 
-    public static final String DEFAULT_NAME =  "Jonh Dou";
+    public static final String DEFAULT_NAME =  "Jonh Doe";
     private int id;
     private String name;
 
